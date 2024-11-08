@@ -13,3 +13,22 @@ config_version=5
 config/name="School-Godot-Project"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[input]
+
+Up={
+"deadzone": 0.5,
+"events": []
+}
+Down={
+"deadzone": 0.5,
+"events": []
+}
+Left={
+"deadzone": 0.5,
+"events": []
+}
+Right={
+"deadzone": 0.5,
+"events": []
+}
