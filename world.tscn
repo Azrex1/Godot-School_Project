@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4vc0ldwrebv8"]
+
+[ext_resource type="Texture2D" uid="uid://b6r6s6wfqv4g0" path="res://pixil-frame-0 (1).png" id="1_lvvug"]
+
+[node name="World" type="Node2D"]
+
+[node name="Cherecter" type="Sprite2D" parent="."]
+position = Vector2(30, 429)
+texture = ExtResource("1_lvvug")
