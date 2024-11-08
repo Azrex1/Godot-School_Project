@@ -6,4 +6,7 @@
 
 [node name="Cherecter" type="Sprite2D" parent="."]
 position = Vector2(376, 396)
+scale = Vector2(3, 3)
 texture = ExtResource("1_5dwnx")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Cherecter"]
