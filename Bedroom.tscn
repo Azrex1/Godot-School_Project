@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpvodgr405at4"]
+
+[ext_resource type="PackedScene" uid="uid://3npv4omxpnj5" path="res://Main_Player.tscn" id="1_do6og"]
+[ext_resource type="Texture2D" uid="uid://b54enn7vh1200" path="res://pixil-frame-0 (3).png" id="2_phftu"]
+
+[node name="Bedroom" type="Node2D"]
+
+[node name="Main_Player" parent="." instance=ExtResource("1_do6og")]
+position = Vector2(424, 600)
+
+[node name="Bed" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(168, 508)
+scale = Vector2(10.5, 8.75)
+texture = ExtResource("2_phftu")

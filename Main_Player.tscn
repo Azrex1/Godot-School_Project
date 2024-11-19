@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://3npv4omxpnj5"]
+[gd_scene load_steps=13 format=3 uid="uid://3npv4omxpnj5"]
 
 [ext_resource type="Texture2D" uid="uid://c5uedubloh7x1" path="res://pixilart-sprite.png" id="1_0byiu"]
+[ext_resource type="Script" path="res://main_player.gd" id="1_kjn1l"]
 [ext_resource type="Texture2D" uid="uid://cfuu6i3w8jp4l" path="res://Sprite-Walk.png" id="2_vyogk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wc114"]
@@ -61,14 +62,28 @@ animations = [{
 "texture": SubResource("AtlasTexture_302w4")
 }],
 "loop": true,
-"name": &"Walking",
+"name": &"Walking_Left",
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybhce"]
+size = Vector2(86, 157)
+
 [node name="Main_Player" type="CharacterBody2D"]
+script = ExtResource("1_kjn1l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3, 3)
+position = Vector2(0, -32)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_d4q7i")
-animation = &"Walking"
-frame_progress = 0.832922
+animation = &"Walking_Left"
+autoplay = "Idle"
+frame_progress = 0.599233
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -276)
+limit_left = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -33.5)
+shape = SubResource("RectangleShape2D_ybhce")
