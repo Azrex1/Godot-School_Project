@@ -1,13 +1,20 @@
 extends CharacterBody2D
-
+@onready var animated_sprite = $AnimatedSprite2D
 
 const SPEED = 500
-
-func get_input():
-	var input_direction = Input.get_vector("Left","Right","Up","Down")
-	velocity = input_direction * SPEED
-
+var Horizintal_Movment
 func _physics_process(delta):
-	get_input()
+	Horizintal_Movment = Input.get_axis("Left","Right")
+	velocity.x = 300 * Horizintal_Movment
 	move_and_slide()
-	velocity.x 
+	handle_movment_animations()
+
+func handle_movment_animations():
+	if Horizintal_Movment == 0:
+		animated_sprite.play("Idle")
+	if Horizintal_Movment == 1:
+		animated_sprite.play("Walking")
+		animated_sprite.flip_h = true
+	if Horizintal_Movment == -1:
+		animated_sprite.play("Walking")
+		animated_sprite.flip_h = false
