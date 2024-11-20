@@ -62,7 +62,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_302w4")
 }],
 "loop": true,
-"name": &"Walking_Left",
+"name": &"Walking",
 "speed": 5.0
 }]
 
@@ -76,13 +76,13 @@ script = ExtResource("1_kjn1l")
 position = Vector2(0, -32)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_d4q7i")
-animation = &"Walking_Left"
+animation = &"Walking"
 autoplay = "Idle"
-frame_progress = 0.599233
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -276)
 limit_left = 0
+position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -33.5)
