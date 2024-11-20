@@ -15,6 +15,13 @@ run/main_scene="res://Bedroom.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1100
+window/size/viewport_height=640
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [input]
 
 Up={
@@ -41,3 +48,4 @@ Right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true

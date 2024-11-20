@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxtougtjf1pdm"]
+[gd_scene load_steps=13 format=3 uid="uid://3npv4omxpnj5"]
 
 [ext_resource type="Texture2D" uid="uid://c5uedubloh7x1" path="res://pixilart-sprite.png" id="1_0byiu"]
 [ext_resource type="Script" path="res://main_player.gd" id="1_kjn1l"]
@@ -82,6 +82,7 @@ autoplay = "Idle"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -276)
 limit_left = 0
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
