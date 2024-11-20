@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcatyoo7q28y2"]
+
+[ext_resource type="PackedScene" uid="uid://bxtougtjf1pdm" path="res://Main_Player.tscn" id="2_cmr4i"]
+[ext_resource type="Texture2D" uid="uid://b54enn7vh1200" path="res://pixil-frame-0 (3).png" id="2_th2l7"]
+[ext_resource type="Texture2D" uid="uid://dci7ego1321kl" path="res://pixil-frame-0 (7).png" id="4_yt3jr"]
+
+[node name="World" type="Node2D"]
+
+[node name="Main_Player" parent="." instance=ExtResource("2_cmr4i")]
+position = Vector2(415, 395)
+
+[node name="Pixil-frame-0(3)" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(224, 352)
+scale = Vector2(8.25, 5.84375)
+texture = ExtResource("2_th2l7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
+z_as_relative = false
+offset_left = 757.0
+offset_top = -6.0
+offset_right = 3557.0
+offset_bottom = 1994.0
+scale = Vector2(0.274909, 0.225242)
+texture = ExtResource("4_yt3jr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
