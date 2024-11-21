@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://3npv4omxpnj5"]
+[gd_scene load_steps=13 format=3 uid="uid://3npv4omxpnj5"]
 
 [ext_resource type="Texture2D" uid="uid://c5uedubloh7x1" path="res://pixilart-sprite.png" id="1_0byiu"]
 [ext_resource type="Script" path="res://main_player.gd" id="1_kjn1l"]
@@ -66,17 +66,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ere7j"]
-size = Vector2(65, 70)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey06m"]
-size = Vector2(11, 45)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6cow"]
-size = Vector2(10, 45)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ng1e"]
-size = Vector2(55, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybhce"]
+size = Vector2(86, 157)
 
 [node name="Main_Player" type="CharacterBody2D"]
 script = ExtResource("1_kjn1l")
@@ -95,21 +86,6 @@ limit_right = 1925
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Body" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -2)
-shape = SubResource("RectangleShape2D_ere7j")
-
-[node name="Head" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, -37, 25, -37, 25, -77, 35, -77, 35, -87, 40, -87, 40, -102, 30, -102, 30, -107, 20, -107, 20, -112, -25, -112, -25, -107, -35, -107, -35, -102, -40, -102, -40, -97, -45, -97, -45, -87, -40, -87, -40, -77, -35, -77, -35, -72, -30, -72, -30, -37)
-
-[node name="Left_Arm" type="CollisionShape2D" parent="."]
-position = Vector2(-39.5, -9.5)
-shape = SubResource("RectangleShape2D_ey06m")
-
-[node name="Right_Arm" type="CollisionShape2D" parent="."]
-position = Vector2(35, -9.5)
-shape = SubResource("RectangleShape2D_i6cow")
-
-[node name="Feet" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 40)
-shape = SubResource("RectangleShape2D_5ng1e")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -33.5)
+shape = SubResource("RectangleShape2D_ybhce")
