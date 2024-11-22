@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://mmm1pf0gutg6"]
+[gd_scene load_steps=2 format=3 uid="uid://mmm1pf0gutg6"]
+
+[ext_resource type="Script" path="res://Interaction/interaction_manager.gd" id="1_rulbv"]
 
 [node name="InteractionManager" type="Node2D"]
+script = ExtResource("1_rulbv")
 
 [node name="Label" type="Label" parent="."]
 z_index = 20

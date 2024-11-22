@@ -15,6 +15,10 @@ run/main_scene="res://Bedroom.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+InteractionManager="*res://Interaction/Interaction_Manager.tscn"
+
 [display]
 
 window/size/viewport_width=1100
