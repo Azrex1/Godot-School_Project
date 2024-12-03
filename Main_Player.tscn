@@ -96,6 +96,8 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Body" type="CollisionShape2D" parent="." groups=["player"]]
+light_mask = 3
+visibility_layer = 3
 position = Vector2(-2, -2)
 shape = SubResource("RectangleShape2D_ere7j")
 
